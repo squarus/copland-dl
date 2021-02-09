@@ -3,6 +3,10 @@ New York Filarmoni arşivinden nota indirmeye yarayan ufak program.
 ***
 Bash'te yazılmıştır. Mac'te kodlanıp Windows'ta denenmemiştir fakat çalışıyor olması gerekiyor. PowerShell x64 kullanmanızı tavsiye ediyorum.
 
+[Özellikler](https://github.com/squarus/copland-dl#özellikler)
+[Gereksinimler](https://github.com/squarus/copland-dl#gereksinimler)
+[Ayarlar](https://github.com/squarus/copland-dl#ayarlar)
+
 ## Özellikler
 **ID numarası ile indirme** - New York Filarmoni arşivi sitesinden indirmek istediğiniz eserin ID numarasını (birkaç rakamdan oluşan bir kod) vermeniz yeterli, gerisini copland-dl halleder.
 
@@ -17,7 +21,7 @@ Bash'te yazılmıştır. Mac'te kodlanıp Windows'ta denenmemiştir fakat çalı
 ## Gereksinimler
 **ImageMagick** - PDF'e çevirme özelliği için gereklidir. Kodun 76. satırındaki `convert` komutunu sağlamaktadır. Bu olmadan da çalışıyor; ancak JPG - PDF çevirme işini elle yapmanız gerekir.
 
-## Basit ayarlar
+## Ayarlar
 ### Kalite ayarı
 Programda DPI (Dots Per Inch) ayarı yapma bulunmaktadır. Kodun en başında, 7. satırda `DPI=300` bulunuyor. Bu ayarı azaltabilirsiniz; direkt olarak siteden belirlediğiniz kalitede indireceği için depolama yanında internet kullanımını da azaltacaktır. Kanımca kalite ve tasarruf arasındaki en uygun nokta `DPI=150`'dir, en yüksek kalite indirmek istiyorsanız ayarı ellemeyin. **300'den yükseğe ayarlarsanız indirme hata verecektir.** Bunun sebebi NYP arşivinin dosyalarını en yüksek 300 DPI olarak sunuyor olmasıdır.
 
