@@ -7,12 +7,13 @@ RENKX='\033[0m' #renksiz
 DPI=300
 #Bu ayarı 150 civarına indirerek dosyaları indirme kalitesini, dolayısıyla internet ve depolama kullanımını azaltabilirsiniz.
 
-
 clear
 printf "${RENK}New York Philarmonic Archive indiriciye (v2) hoş geldiniz!${RENKX}\nEserin adı ne?: "
 read ESER
-mkdir "$ESER"
-#Eserin ismiyle bir klasör yaratır.
+KLASOR=$ESER
+#KLASOR="istediğiniz isim"
+mkdir "$KLASOR"
+#Eserin ismini Klasör değişkenine transfer edip aynı isimde bir klasör yaratır.
 
 printf "Eserin ID kodu: "
 read ID
@@ -36,7 +37,7 @@ while true; do
 done
 #doğrulama amaçlı evet hayır promptu verir.
 
-mkdir ${ESER}/jpg
+mkdir ${KLASOR}/jpg
 
 for ((i = $ILK_SAYFA; i < $((SON_SAYFA+1)); ++i)); do
 #Belirlenmiş aralığın sonuna gelene dek "i" değişkenine 1 ekler.
@@ -44,14 +45,14 @@ for ((i = $ILK_SAYFA; i < $((SON_SAYFA+1)); ++i)); do
   #"i" değişkenini 3 adet sıfır kullanarak "NUMBER" adlı yeni değişkene yazar. Bunun sebebi NyPhil'in URL'sinin 3 adet sıfırlı sayı beklemesidir.
   printf "${RENK}Sayfa #$i indiriliyor... ${RENKX}"
   #indirilen sayfayı gösterir.
-  DOSYA=${ESER}/jpg/${NUMBER}.jpg
+  DOSYA=${KLASOR}/jpg/${NUMBER}.jpg
   if [ -f "$DOSYA" ]; then
   #İndirmeden önce dosyanın varlığını kontrol eder.
       echo "Bu sayfa zaten mevcut."
       #İndirme komutunu atlayıp loop'un başına döner.
     else
       echo " "
-      curl "https://archives.nyphil.org/index.php/jp2/|MS|1|${ID}|MS_${ID}_${NUMBER}.jp2/portrait/${DPI}0" --output ${ESER}/jpg/${NUMBER}.jpg
+      curl "https://archives.nyphil.org/index.php/jp2/|MS|1|${ID}|MS_${ID}_${NUMBER}.jp2/portrait/${DPI}0" --output ${KLASOR}/jpg/${NUMBER}.jpg
       #Adrese ID'yi ve sayfa sayısını yerleştirip sonunu curl ile indirir. --output komutu ile jpg klasörüne jpg olarak kaydeder. Kaydedilen dosyanın ismini sayfa sayısı koyar.
   fi
 done
@@ -72,7 +73,7 @@ printf "${RENK}PDF'e çevirme dosyanın boyutuna göre uzun sürebilir.${RENKX}\
 BASLA=$SECONDS
 #geçen zamanı ölçmek için değişken.
 
-convert `ls -v ${ESER}/jpg/*.jpg` ${ESER}/${ESER}.pdf
+convert `ls -v ${KLASOR}/jpg/*.jpg` ${KLASOR}/${ESER}.pdf
 #ImageMagick paketi ile gelen convert'i kullanarak photos klasöründeki tüm jpgleri pdf'e dönüştürür.
 
 BITTI=$SECONDS

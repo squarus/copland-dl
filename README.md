@@ -3,6 +3,17 @@ New York Filarmoni arşivinden nota indirmeye yarayan ufak program.
 ***
 Bash'te yazılmıştır. Mac'te kodlanıp Windows'ta denenmemiştir fakat çalışıyor olması gerekiyor. PowerShell x64 kullanmanızı tavsiye ediyorum.
 
+## Özellikler
+**ID numarası ile indirme** - New York Filarmoni arşivi sitesinden indirmek istediğiniz eserin ID numarasını (birkaç rakamdan oluşan bir kod) vermeniz yeterli, gerisini copland-dl halleder.
+
+**Sayfa aralığı seçme** - İlk ve son sayfayı belirleyip sadece istediğiniz kısmı indirerek veri ve depolama tasarrufu yapabilirsiniz.
+
+**Otomatik PDF yaratma** - İndirme bittikten sonra isteğe bağlı olarak otomatik PDF yaratma seçeneği sunulmaktadır.
+
+**Yüksek kalite** - Varsayılan ayarlar ile copland-dl mevcut eserin en kaliteli halini indirecektir.
+
+**Otomatik organizasyon** - Dağınıklığa son! İndirmeyi başlatmadan önce girdiğiniz eser ismi ile copland-dl size otomatik klasör yaratır, indirilen görselleri bu klasörün içinde "jpg" adlı klasörde depolar ve yarattığınız PDF'e de eserin ismini koyar.
+
 ## Gereksinimler
 **ImageMagick** - PDF'e çevirme özelliği için gereklidir. Kodun 76. satırındaki `convert` komutunu sağlamaktadır. Bu olmadan da çalışıyor; ancak JPG - PDF çevirme işini elle yapmanız gerekir.
 
