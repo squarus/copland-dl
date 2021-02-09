@@ -4,6 +4,10 @@ RENK='\033[0;31m' #kırmızı renk
 RENKX='\033[0m' #renksiz
 #script boyunca renkli mesaj yazarken kolay kullanım için iki değişken belirler.
 
+DPI=300
+#Bu ayarı 150 civarına indirerek dosyaları indirme kalitesini, dolayısıyla internet ve depolama kullanımını azaltabilirsiniz.
+
+
 clear
 printf "${RENK}New York Philarmonic Archive indiriciye (v2) hoş geldiniz!${RENKX}\nEserin adı ne?: "
 read ESER
@@ -47,7 +51,7 @@ for ((i = $ILK_SAYFA; i < $((SON_SAYFA+1)); ++i)); do
       #İndirme komutunu atlayıp loop'un başına döner.
     else
       echo " "
-      curl "https://archives.nyphil.org/index.php/jp2/|MS|1|${ID}|MS_${ID}_${NUMBER}.jp2/portrait/3000" --output ${ESER}/jpg/${NUMBER}.jpg
+      curl "https://archives.nyphil.org/index.php/jp2/|MS|1|${ID}|MS_${ID}_${NUMBER}.jp2/portrait/${DPI}0" --output ${ESER}/jpg/${NUMBER}.jpg
       #Adrese ID'yi ve sayfa sayısını yerleştirip sonunu curl ile indirir. --output komutu ile jpg klasörüne jpg olarak kaydeder. Kaydedilen dosyanın ismini sayfa sayısı koyar.
   fi
 done
