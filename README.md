@@ -3,11 +3,9 @@ New York Filarmoni arşivinden nota indirmeye yarayan ufak program.
 ***
 Bash'te yazılmıştır. Mac'te kodlanıp Windows'ta denenmemiştir fakat çalışıyor olması gerekiyor. PowerShell x64 kullanmanızı tavsiye ediyorum.
 
-[ÖZELLİKLER](https://github.com/squarus/copland-dl#özellikler)
-
-[GEREKSİNİMLER](https://github.com/squarus/copland-dl#gereksinimler)
-
-[AYARLAR](https://github.com/squarus/copland-dl#ayarlar)
+*[ÖZELLİKLER](https://github.com/squarus/copland-dl#özellikler)
+*[GEREKSİNİMLER](https://github.com/squarus/copland-dl#gereksinimler)
+*[AYARLAR](https://github.com/squarus/copland-dl#ayarlar)
 
 ## Özellikler
 **ID numarası ile indirme** - New York Filarmoni arşivi sitesinden indirmek istediğiniz eserin ID numarasını (birkaç rakamdan oluşan bir kod) vermeniz yeterli, gerisini copland-dl halleder.
