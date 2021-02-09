@@ -1,7 +1,7 @@
 # copland-dl
 New York Filarmoni arşivinden nota indirmeye yarayan ufak program.
 ***
-Bash'te yazılmıştır. Mac'te kodlanıp Windows'ta denenmemiştir fakat çalışıyor olması gerekiyor. PowerShell x64 kullanmanızı tavsiye ediyorum.
+Bash'te yazılmıştır. Mac'te kodlanıp Windows'ta denenmemiştir fakat ~~çalışıyor olması gerekiyor~~ Ben bir aptal olduğum için Windows'un Bash çalıştırmadığını unutmuşum. Bir sonraki büyük güncellemeye kadar bu program sadece macOS, Linux vb. Unix ortamlarında çalışabilmektedir. 
 
 * [ÖZELLİKLER](https://github.com/squarus/copland-dl#özellikler)
 * [GEREKSİNİMLER](https://github.com/squarus/copland-dl#gereksinimler)
